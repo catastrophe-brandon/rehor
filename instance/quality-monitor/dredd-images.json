@@ -1,0 +1,72 @@
+{
+  "dredd_images": [
+    {
+      "url": "https://i.imgur.com/vB9B5.gif",
+      "description": "Dredd saying 'I AM THE LAW'",
+      "type": "classic"
+    },
+    {
+      "url": "https://giffiles.alphacoders.com/138/13896.gif",
+      "description": "Dredd helmet closeup",
+      "type": "intimidating"
+    },
+    {
+      "url": "https://i.pinimg.com/originals/3e/6a/15/3e6a150ee39fde8848a73f516eef9022.gif",
+      "description": "Dredd firing weapon",
+      "type": "action"
+    }
+  ],
+  "phrases_by_violation": {
+    "swallowed_errors": [
+      "I AM THE LAW! Empty catch blocks are a crime against justice!",
+      "You have been judged! The sentence for swallowing errors: REFACTOR!",
+      "Guilty of code crimes! Empty catch blocks will not be tolerated!",
+      "The law is clear: errors must be handled or logged!",
+      "Justice demands proper error handling! This violation cannot stand!"
+    ],
+    "console_log": [
+      "The law is clear: no console.log statements in production!",
+      "Justice demands proper logging! Remove this console statement!",
+      "I am the LAW! Console logs are for debugging only!",
+      "Guilty! Production code must use proper logging frameworks!",
+      "The sentence is clear: replace console.log with real logging!"
+    ],
+    "todo_comments": [
+      "The law requires action, not TODO comments!",
+      "Justice delayed is justice denied! Complete this TODO!",
+      "I AM THE LAW! TODOs must be tracked or completed!",
+      "Guilty of procrastination! Create a ticket or finish the work!",
+      "The law demands completion! No TODO shall go untracked!"
+    ],
+    "magic_numbers": [
+      "GUILTY of magic numbers! The law demands named constants!",
+      "I judge you! Hard-coded timeouts are a crime!",
+      "The law is the law! Extract this magic number to a constant!",
+      "Justice requires clarity! Name your constants!",
+      "Guilty! Magic numbers obscure intent and must be eliminated!"
+    ],
+    "force_push": [
+      "I AM THE LAW! Force pushing without lease is DANGEROUS!",
+      "GUILTY! The law requires --force-with-lease for safety!",
+      "Justice demands safer git operations! Use --force-with-lease!",
+      "The law protects your teammates! Never force push without lease!",
+      "Guilty of reckless git usage! --force-with-lease is mandatory!"
+    ],
+    "generic": [
+      "I AM THE LAW!",
+      "You have been judged!",
+      "The law is the law!",
+      "Justice must be served!",
+      "Guilty! The sentence: REFACTOR!"
+    ]
+  },
+  "comment_templates": {
+    "header": "![I AM THE LAW]({image_url})\n\n## {catchphrase}\n\n**The Quality Monitor has detected code crimes in this PR!**\n\nYou have been JUDGED and found... in need of refactoring!\n\n",
+    "footer": "\n---\n\n*This automated comment was posted by the Rehor Quality Monitor. Thank you for your contribution! These suggestions are meant to help improve code quality.*\n\n*Remember: I AM THE LAW! But also... we're here to help! Questions? Reach out to the platform team.*\n\n**Justice is served through better code!** ⚖️"
+  },
+  "severity_emojis": {
+    "high": "🚨",
+    "medium": "⚠️",
+    "low": "ℹ️"
+  }
+}

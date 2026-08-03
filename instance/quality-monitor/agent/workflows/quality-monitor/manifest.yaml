@@ -1,0 +1,20 @@
+name: quality-monitor
+type: workflow
+description: Monitor code quality and post fun PR comments for violations
+
+preflight:
+  - 01-scan-prs-for-violations.py
+
+provides:
+  claude_md: CLAUDE.md
+  skills:
+    - post-dredd-comment
+
+requires:
+  mcp_servers:
+    - bot-memory
+  env_vars:
+    - BOT_INSTANCE_ID
+    - GH_TOKEN
+  optional_env_vars:
+    - SLACK_WEBHOOK_URL

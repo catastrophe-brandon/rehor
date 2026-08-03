@@ -1,0 +1,14 @@
+workflow: ./agent/workflows/quality-monitor
+source: scheduled  # Not Jira-driven, runs on schedule
+
+envs:
+  - slack  # For optional Slack notifications
+
+claude_md:
+  strategy: append  # Append workflow CLAUDE.md to core CLAUDE.md
+
+# Optional: Configure KEDA cron scaler for scheduled runs
+# This would go in the deployment template
+# schedule:
+#   cron: "0 9 * * 1-5"  # Daily at 9 AM weekdays
+#   timezone: "America/New_York"
