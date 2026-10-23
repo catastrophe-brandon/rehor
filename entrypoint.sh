@@ -214,10 +214,9 @@ if [ -n "${BOT_MEMORY_HEALTH_URL:-}" ]; then
     wait_for_http "memory-server" "$BOT_MEMORY_HEALTH_URL" "${BOT_MEMORY_HEALTH_TIMEOUT:-120}"
 fi
 
-# The UI-test login MCP runs as a sidecar and must be ready before the agent
-# starts its first cycle. Its health URL is set only for that instance.
-if [ -n "${UI_TEST_LOGIN_HELPER_HEALTH_URL:-}" ]; then
-    wait_for_http "UI-test login helper" "$UI_TEST_LOGIN_HELPER_HEALTH_URL" "${UI_TEST_LOGIN_HELPER_HEALTH_TIMEOUT:-60}"
+# Optional sidecars can be checked before the bot starts its first cycle.
+if [ -n "${BOT_STARTUP_HEALTH_URL:-}" ]; then
+    wait_for_http "startup dependency" "$BOT_STARTUP_HEALTH_URL" "${BOT_STARTUP_HEALTH_TIMEOUT:-60}"
 fi
 
 

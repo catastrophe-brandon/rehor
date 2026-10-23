@@ -1,9 +1,9 @@
 #!/bin/bash
 # Start headless Chromium for chrome-devtools MCP
 
-# The runner uses this token only for its private helper-cycle control call.
+# The runner uses this token only for its private cycle-start callback.
 # Do not pass it to Chromium or browser-created child processes.
-unset UI_TEST_LOGIN_HELPER_RESET_TOKEN
+unset BOT_CYCLE_START_TOKEN
 
 # Map SSO credentials to E2E vars (used by Playwright global-setup).
 # SSO_USERNAME/SSO_PASSWORD are unset by entrypoint.sh before entrypoint.d runs,
